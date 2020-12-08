@@ -1,0 +1,162 @@
+body {
+  background: #000;
+  color: #ffffff;
+  padding: 0 310px 0 10px;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 120px;
+  height: 120px;
+  text-align: center;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 20px);
+  background-color: #000000;
+}
+
+#list {
+  z-index: -1;
+  width: 100%;
+  max-width: 1700px;
+  margin: 120px auto 0;
+  border-top: 3px solid #08ffff;
+}
+
+.item {
+  z-index: -1;
+  border: 1px solid #00c8dc;
+  width: calc(100% - 42px);
+  padding: 20px;
+  margin-bottom: -1px;
+  background-color: #222222;
+}
+
+.item .text {
+  font-size: 32px;
+  line-height: 64px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item .user {
+  display: flex;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: .01rem solid #333333;
+}
+
+.item .user .nick {
+  font-size: 32px;
+  line-height: 40px;
+  margin-left: 15px;
+}
+
+.item .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #0072dc;
+}
+.model {
+  position: absolute;
+  right: 10px;
+  left: auto;
+  top: 120px;
+  height: auto;
+  width: 300px;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  border-top: 3px solid #08ffff;
+  background: url(bg.png) no-repeat 50%;
+  background-size: cover;
+  min-height: 800px;
+}
+.model img{
+  height: 230px;
+  width: 230px;
+  margin: 20px auto;
+}
+.model div{
+  font-size: 25px;
+  text-align: center;
+}
+
+.additem {
+  animation: added 1s;
+}
+
+.removeitem {
+  animation: removed 2.5s;
+}
+
+@keyframes removed {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes added {
+  from {
+    margin-top: -169px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 2000px) {
+  #list {
+    max-width: 100%;
+    margin: 120px 0 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .model {
+    display: none;
+  }
+  #list{
+    margin-top: 70px;
+  }
+  body {
+    padding: 0 10px;
+  }
+  .title{
+    font-size:20px;
+    height: 70px;
+    line-height: 70px;
+  }
+  .item {
+    padding: 10px;
+    width: calc(100% - 22px);
+  }
+  .item .user{
+    padding-bottom: 10px;
+  }
+  .item .text {
+    font-size: 16px;
+    line-height: 27px;
+    padding-top: 10px;
+  }
+  
+  .item .user .nick {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  
+  .item .user img {
+    width: 25px;
+    height: 25px;
+  }
+}

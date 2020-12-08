@@ -1,0 +1,49 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  height: 100%;
+  padding: 0 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #262626;
+  padding-top: 127px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.des {
+  font-size: 14px;
+  color: #8c8c8c;
+  padding: 16px 11px 8px;
+  text-align: center;
+}
+
+.send {
+  background: #5586ff;
+  height: 48px;
+  min-width: 550rpx;
+  margin: 30px 0;
+  line-height: 48px;
+  padding:0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.blue {
+  background: #f36b53 !important;
+  color: #fff !important;
+}
+
+.tips{
+  text-align: center;
+  font-size:14px;
+  color: #BCBCBC;
+  margin:auto auto 30px
+}

@@ -1,0 +1,11 @@
+<view class="main">
+  <view class="title">实时弹幕消息演示</view>
+  <view class="des">你可以在小程序中发送一些消息，这些消息将会实时展示在展厅大屏幕中，快点击下方按钮试一试吧～</view>
+  <button wx:if="{{!flag}}" 
+          class="send blue" 
+          open-type="getUserInfo"
+          disabled="{{loading}}"
+          bindgetuserinfo="bind">{{loading?'加载中':'授权信息'}}</button>
+  <button wx:else class="send" open-type="contact">发送消息</button>
+  <view class="tips">云开发官方演示示例</view>
+</view>

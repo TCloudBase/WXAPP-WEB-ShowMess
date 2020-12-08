@@ -1,0 +1,43 @@
+<script src="res/getenv.js"></script>
+<script type="text/javascript" src="res/show.js" charset="UTF-8"></script>
+<script>
+  window.onload = function () {
+    Show.init()
+    Show.num = 5
+    //一键部署时自动获取环境ID，开发时建议去掉，替换成下段注释代码
+    getEnvinfo(function(info){
+      const app = cloudbase.init({
+        env: info['ENV_ID']
+      })
+      app.auth({
+        persistence: "local"
+      }).anonymousAuthProvider().signIn().then(() => {
+        app.database().collection('mess').orderBy("date", "desc").watch({
+          onChange: (snapshot) => {
+            Show.excute(snapshot)
+          },
+          onError: (error) => {
+            console.log("收到error", error);
+          }
+        });
+      });
+    })
+    // ------------------------
+    // 如果你不是一键部署，需要将此段代码替换上面，并更新自己的环境ID
+    //   const app = cloudbase.init({
+    //     env: '你的环境ID'
+    //   })
+    //   app.auth({
+    //     persistence: "local"
+    //   }).anonymousAuthProvider().signIn().then(() => {
+    //     app.database().collection('mess').orderBy("date", "desc").watch({
+    //       onChange: (snapshot) => {
+    //         Show.excute(snapshot)
+    //       },
+    //       onError: (error) => {
+    //         console.log("收到error", error);
+    //       }
+    //     });
+    //   });
+  }
+</script>

@@ -1,0 +1,42 @@
+{
+    "miniprogramRoot": "miniprogram/",
+    "cloudfunctionRoot": "cloudfunctions/",
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "enhance": true,
+        "bundle": false,
+        "useApiHook": true,
+        "scopeDataCheck": false,
+        "useMultiFrameRuntime": true
+    },
+    "appid": "wx1b9cf09bfcb427dd",
+    "projectname": "%E5%9C%A8%E7%BA%BF%E5%BC%B9%E5%B9%95",
+    "libVersion": "2.8.1",
+    "condition": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
+            "list": []
+        },
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide"
+                }
+            ]
+        }
+    }
+}
