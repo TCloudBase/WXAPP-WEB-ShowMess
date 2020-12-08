@@ -17,7 +17,7 @@
 
 1. 将项目下载后打开，cloudfunctions存放云函数代码，miniprogram存放小程序代码，webview存放WEB应用代码
 
-2. 将cloudfunctions目录下三个云函数创建上传并云端安装依赖。
+2. 将cloudfunctions目录下三个云函数创建上传并云端安装依赖。delete云函数需要设置每10分钟触发一次的时间触发器
 
 3. 在小程序云开发控制台中【设置-全局设置-添加消息推送】选择text类型对接到contact云函数
 
