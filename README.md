@@ -13,19 +13,25 @@
 
 [![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https%3A%2F%2Fgithub.com%2FTCloudBase%2FWXAPP-WEB-ShowMess&branch=master)
 
-**注意：一键部署之后还需要操作下述步骤中第3步**
+**注意：一键部署之后还需要操作下述步骤中第5步**
 
-1. 将项目下载后打开，cloudfunctions存放云函数代码，miniprogram存放小程序代码，webview存放WEB应用代码
+1. 小程序开发者工具打开此项目
 
-2. 将cloudfunctions目录下三个云函数创建上传并云端安装依赖。delete云函数需要设置每10分钟触发一次的时间触发器
+2. 确定云开发环境（按量付费）最好有一个全新的按量付费小程序
 
-3. 在小程序云开发控制台中【设置-全局设置-添加消息推送】选择text类型对接到contact云函数
+3. 将项目下载后打开，cloudfunctions存放云函数代码，miniprogram存放小程序代码，webview存放WEB应用代码
 
-4. 创建数据库mess（权限设置为：所有人可读）、user（权限设置为：近管理员可写）
+4. 将cloudfunctions目录下三个云函数创建上传并云端安装依赖。delete云函数需要上传触发器
 
-5. 在微信开发者工具中正常预览小程序（如果提示找不到云函数，则是环境指向问题，在app.js中设置envid）
+5. 在小程序云开发控制台中【设置-全局设置-添加消息推送】选择text类型对接到contact云函数
 
-6. 将index.html中的代码调换一下，填充自己的云开发环境ID，本地运行即可
+6. 创建数据库mess（权限设置为：所有人可读）、user（权限设置为：近管理员可写）
+
+7. 在微信开发者工具中正常预览小程序（如果提示找不到云函数，则是环境指向问题，在app.js中设置envid）
+
+8.  webview/index.html 第3行填写云开发环境ID
+
+9. 将 webview 内所有文件全部上传至静态托管根目录（先开通静态网站托管）
 
 ## 参考文档
 
