@@ -1,0 +1,12 @@
+{
+	"permissions": {
+	  "openapi": []
+	},
+	"triggers": [
+	  {
+		"name": "deleteTimer",
+		"type": "timer",
+		"config": "0 */10 * * * * *"
+	  }
+	]
+  }
