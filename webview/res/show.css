@@ -1,7 +1,7 @@
 body {
   background: #000;
   color: #ffffff;
-  padding: 0 310px 0 10px;
+  padding: 0 10px;
 }
 
 .title {
@@ -60,30 +60,6 @@ body {
   height: 40px;
   border-radius: 50%;
   border: 1px solid #0072dc;
-}
-.model {
-  position: absolute;
-  right: 10px;
-  left: auto;
-  top: 120px;
-  height: auto;
-  width: 300px;
-  display: flex;
-  padding: 20px 0;
-  flex-direction: column;
-  border-top: 3px solid #08ffff;
-  background: url(bg.png) no-repeat 50%;
-  background-size: cover;
-  min-height: 800px;
-}
-.model img{
-  height: 230px;
-  width: 230px;
-  margin: 20px auto;
-}
-.model div{
-  font-size: 25px;
-  text-align: center;
 }
 
 .additem {
