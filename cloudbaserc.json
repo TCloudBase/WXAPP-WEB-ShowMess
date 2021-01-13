@@ -46,7 +46,14 @@
             },
             {
               "name": "delete",
-              "installDependency":true
+              "installDependency":true,
+              "triggers":[
+                {
+                  "name": "deleteMess",
+                  "type": "timer",
+                  "config": "0 0/10 * * * * *"
+                }
+              ]
             },
             {
               "name": "inituser",
@@ -74,7 +81,7 @@
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
           "outputPath": "webview",
-          "cloudPath": "/mess",
+          "cloudPath": "/mess/",
           "envVariables": {
             "ENV_ID": "{{env.ENV_ID}}"
           }
