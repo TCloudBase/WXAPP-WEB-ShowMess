@@ -19,13 +19,7 @@ var Show = {
   init () {
     document.body.innerHTML = `
       <div class="title">云开发实时弹幕消息展示看板</div>
-      <div id="list"></div>
-      <div class="model">
-        <img src="res/mini.jpg"/>
-        <div>扫码参与演示</div>
-        <img style="margin-top:150px;" src="res/public.jpg"/>
-        <div>扫码关注公众号</div>
-      </div>`
+      <div id="list"></div>`
     Show.list = document.getElementById('list')
   },
   excute (snapshot) {
