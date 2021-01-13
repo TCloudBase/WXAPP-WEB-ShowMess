@@ -1,5 +1,5 @@
 function getEnvinfo (success) {
-  const url = 'cloudbaseenv.json'
+  const url = '/cloudbaseenv.json'
   const request = new XMLHttpRequest()
   request.open('get', url)
   request.send(null)
